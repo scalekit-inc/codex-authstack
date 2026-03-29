@@ -1,0 +1,40 @@
+{
+  "name": "agent-auth",
+  "version": "1.7.0",
+  "description": "Helps integrate Scalekit Agent Auth so agents can act in third-party apps on behalf of users.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com/authenticate/agent/start-agent-auth-coding-agents",
+  "repository": "https://github.com/scalekit-inc/claude-code-authstack",
+  "license": "MIT",
+  "keywords": [
+    "scalekit",
+    "agent-auth",
+    "oauth",
+    "connected-accounts"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Auth",
+    "shortDescription": "Connect agents to third-party apps safely.",
+    "longDescription": "Guides Codex through connected-account creation, user authorization, token retrieval, and downstream API use for Scalekit Agent Auth.",
+    "developerName": "Scalekit",
+    "category": "Agent Auth",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://docs.scalekit.com/authenticate/agent/start-agent-auth-coding-agents",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Integrate Scalekit agent auth for Gmail or Slack.",
+      "Set up a connected account flow for this agent.",
+      "Review token refresh handling for my agent integration."
+    ],
+    "brandColor": "#1D4ED8"
+  }
+}

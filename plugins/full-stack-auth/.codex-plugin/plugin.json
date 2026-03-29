@@ -1,0 +1,40 @@
+{
+  "name": "full-stack-auth",
+  "version": "1.4.0",
+  "description": "Production-ready authentication flows using Scalekit full-stack auth across common stacks.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com",
+  "repository": "https://github.com/scalekit-inc/claude-code-authstack",
+  "license": "MIT",
+  "keywords": [
+    "authentication",
+    "oauth",
+    "full-stack",
+    "sessions"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Full-Stack Auth",
+    "shortDescription": "Build complete app auth with Scalekit.",
+    "longDescription": "Covers login, callback, cookie-backed sessions, token refresh, logout, and protected routes for web applications using Scalekit.",
+    "developerName": "Scalekit",
+    "category": "Application Auth",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://docs.scalekit.com",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Add Scalekit full-stack auth to this app.",
+      "Implement login, callback, and logout with Scalekit.",
+      "Review my session refresh and logout flow."
+    ],
+    "brandColor": "#7C3AED"
+  }
+}

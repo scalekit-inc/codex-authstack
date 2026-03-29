@@ -1,0 +1,41 @@
+{
+  "name": "modular-sso",
+  "version": "1.2.0",
+  "description": "Guides teams through Modular SSO with Scalekit when the app already manages users and sessions.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com",
+  "repository": "https://github.com/scalekit-inc/claude-code-authstack",
+  "license": "MIT",
+  "keywords": [
+    "sso",
+    "saml",
+    "oidc",
+    "authentication",
+    "enterprise"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Modular SSO",
+    "shortDescription": "Add enterprise SSO without replacing your app stack.",
+    "longDescription": "Helps implement connection-based SSO, IdP-initiated login handling, and enterprise onboarding while preserving existing user and session management.",
+    "developerName": "Scalekit",
+    "category": "Enterprise SSO",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://docs.scalekit.com",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Add modular enterprise SSO with Scalekit to this app.",
+      "Implement IdP-initiated login handling with Scalekit.",
+      "Review my SSO onboarding and callback flow."
+    ],
+    "brandColor": "#B45309"
+  }
+}

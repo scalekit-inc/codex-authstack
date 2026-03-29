@@ -1,0 +1,68 @@
+{
+  "name": "scalekit-auth-stack",
+  "interface": {
+    "displayName": "Scalekit Auth Stack"
+  },
+  "plugins": [
+    {
+      "name": "mcp-auth",
+      "source": {
+        "source": "local",
+        "path": "./plugins/mcp-auth"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "MCP Security"
+    },
+    {
+      "name": "agent-auth",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-auth"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Agent Auth"
+    },
+    {
+      "name": "modular-sso",
+      "source": {
+        "source": "local",
+        "path": "./plugins/modular-sso"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Enterprise SSO"
+    },
+    {
+      "name": "modular-scim",
+      "source": {
+        "source": "local",
+        "path": "./plugins/modular-scim"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Provisioning"
+    },
+    {
+      "name": "full-stack-auth",
+      "source": {
+        "source": "local",
+        "path": "./plugins/full-stack-auth"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Application Auth"
+    }
+  ]
+}

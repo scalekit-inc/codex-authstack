@@ -1,0 +1,41 @@
+{
+  "name": "mcp-auth",
+  "version": "1.3.0",
+  "description": "Guides teams through adding OAuth 2.1 authorization to MCP servers with Scalekit.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com/authenticate/mcp/start-mcp-auth-coding-agents",
+  "repository": "https://github.com/scalekit-inc/claude-code-authstack",
+  "license": "MIT",
+  "keywords": [
+    "oauth",
+    "mcp",
+    "authentication",
+    "scalekit"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "MCP Auth",
+    "shortDescription": "Add OAuth 2.1 protection to MCP servers.",
+    "longDescription": "Production-oriented guidance for securing MCP servers with Scalekit, including protected-resource metadata, token validation, and host testing.",
+    "developerName": "Scalekit",
+    "category": "MCP Security",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://docs.scalekit.com/authenticate/mcp/start-mcp-auth-coding-agents",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Add Scalekit OAuth 2.1 auth to this MCP server.",
+      "Review this MCP auth flow for missing security steps.",
+      "Set up protected-resource metadata for my MCP server."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

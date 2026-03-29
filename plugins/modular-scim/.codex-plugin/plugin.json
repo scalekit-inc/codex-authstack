@@ -1,0 +1,41 @@
+{
+  "name": "modular-scim",
+  "version": "1.2.0",
+  "description": "Guides teams through SCIM provisioning with Scalekit using the Directory API and webhooks.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com",
+  "repository": "https://github.com/scalekit-inc/claude-code-authstack",
+  "license": "MIT",
+  "keywords": [
+    "scim",
+    "provisioning",
+    "webhooks",
+    "users",
+    "groups"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Modular SCIM",
+    "shortDescription": "Add provisioning and lifecycle sync with Scalekit.",
+    "longDescription": "Covers SCIM-style provisioning workflows with Scalekit Directory API sync, webhook handling, event mapping, and operational guardrails.",
+    "developerName": "Scalekit",
+    "category": "Provisioning",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://docs.scalekit.com",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Add Scalekit SCIM provisioning to this app.",
+      "Implement a Scalekit webhook endpoint for directory sync.",
+      "Review my user provisioning and deprovisioning flow."
+    ],
+    "brandColor": "#BE123C"
+  }
+}
