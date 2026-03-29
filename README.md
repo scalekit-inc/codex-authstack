@@ -28,6 +28,29 @@ Each plugin includes invocation examples in its own README. Typical prompts look
 - `Integrate Scalekit agent auth for Gmail and Slack`
 - `Implement enterprise SSO with Scalekit in this app`
 
+## Install In Codex
+
+1. Clone this repository locally.
+2. In Codex, add a local plugin marketplace that points to [`/Users/saif/Projects/ai-first/codex-auth-stack/.agents/plugins/marketplace.json`](/Users/saif/Projects/ai-first/codex-auth-stack/.agents/plugins/marketplace.json).
+3. Open the marketplace in Codex and install one of the plugins:
+   - `mcp-auth`
+   - `agent-auth`
+   - `modular-sso`
+   - `modular-scim`
+   - `full-stack-auth`
+4. Restart or reload Codex if the client asks for it.
+5. Try one of the sample prompts from the installed plugin README.
+
+## Quick Smoke Test
+
+After installing `mcp-auth`, ask Codex:
+
+```text
+Add Scalekit OAuth 2.1 auth to this MCP server
+```
+
+You should see Codex pick up the `adding-mcp-oauth` skill and guide the workflow described in [`plugins/mcp-auth/README.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/README.md).
+
 ## Validation
 
 Run the local validator before packaging or publishing changes:
