@@ -9,6 +9,8 @@ from pathlib import Path
 
 
 REQUIRED_POLICY_FIELDS = {"installation", "authentication"}
+MIN_SKILL_COUNT = 2
+MIN_REFERENCE_COUNT = 1
 
 
 def load_json(path: Path) -> dict:
@@ -94,7 +96,18 @@ def main() -> int:
         expect(manifest.get("skills") == "./skills/", f"{name}: skills path must be ./skills/.", errors)
 
         skill_files = list(plugin_dir.glob("skills/**/SKILL.md"))
-        expect(bool(skill_files), f"{name}: at least one SKILL.md is required.", errors)
+        expect(
+            len(skill_files) >= MIN_SKILL_COUNT,
+            f"{name}: expected at least {MIN_SKILL_COUNT} SKILL.md files, found {len(skill_files)}.",
+            errors,
+        )
+
+        reference_files = [path for path in plugin_dir.glob("references/**/*") if path.is_file()]
+        expect(
+            len(reference_files) >= MIN_REFERENCE_COUNT,
+            f"{name}: expected at least {MIN_REFERENCE_COUNT} reference document, found {len(reference_files)}.",
+            errors,
+        )
 
         if "mcpServers" in manifest:
             mcp_path = plugin_dir / ".mcp.json"

@@ -13,6 +13,12 @@
 
 - `integrating-agent-auth`
 
+## Additional Skills
+
+- `agent-auth`
+- `building-agent-mcp-server`
+- `production-readiness-scalekit`
+
 Try asking Codex:
 
 - `Integrate Scalekit agent auth for Gmail`
@@ -26,6 +32,17 @@ Try asking Codex:
 - `SCALEKIT_ENV_URL`
 
 Most connectors must be created in the Scalekit dashboard before code integration. Gmail is the main exception for quick-start testing.
+
+The plugin also ships [`./.mcp.json`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/.mcp.json), which points at the remote Scalekit MCP server.
+
+## Reference Docs
+
+- Connector catalog: [`references/agent-connectors/README.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/references/agent-connectors/README.md)
+- Connected accounts: [`references/connected-accounts.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/references/connected-accounts.md)
+- Connections: [`references/connections.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/references/connections.md)
+- Providers: [`references/providers.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/references/providers.md)
+- BYOC: [`references/byoc.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/references/byoc.md)
+- Code samples: [`references/code-samples.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/agent-auth/references/code-samples.md)
 
 ## Troubleshooting
 

@@ -13,6 +13,11 @@
 
 - `modular-sso`
 
+## Additional Skills
+
+- `implementing-admin-portal`
+- `production-readiness-scalekit`
+
 Try asking Codex:
 
 - `Add enterprise SSO with Scalekit to this app`
@@ -24,6 +29,12 @@ Try asking Codex:
 - `SCALEKIT_ENVIRONMENT_URL`
 - `SCALEKIT_CLIENT_ID`
 - `SCALEKIT_CLIENT_SECRET`
+
+The plugin also ships [`./.mcp.json`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/modular-sso/.mcp.json), which points at the remote Scalekit MCP server.
+
+## Reference Docs
+
+- [`references/redirects.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/modular-sso/references/redirects.md)
 
 ## Troubleshooting
 

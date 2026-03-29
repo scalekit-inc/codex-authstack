@@ -17,10 +17,11 @@
     "sessions"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Full-Stack Auth",
     "shortDescription": "Build complete app auth with Scalekit.",
-    "longDescription": "Covers login, callback, cookie-backed sessions, token refresh, logout, and protected routes for web applications using Scalekit.",
+    "longDescription": "Covers login, callback, cookie-backed sessions, token refresh, logout, protected routes, framework-specific implementations, migrations, and production-readiness for web applications using Scalekit.",
     "developerName": "Scalekit",
     "category": "Application Auth",
     "capabilities": [

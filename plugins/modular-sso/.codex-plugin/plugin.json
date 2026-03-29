@@ -18,10 +18,11 @@
     "enterprise"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Modular SSO",
     "shortDescription": "Add enterprise SSO without replacing your app stack.",
-    "longDescription": "Helps implement connection-based SSO, IdP-initiated login handling, and enterprise onboarding while preserving existing user and session management.",
+    "longDescription": "Helps implement connection-based SSO, IdP-initiated login handling, enterprise onboarding, admin portal setup, and production-readiness while preserving existing user and session management.",
     "developerName": "Scalekit",
     "category": "Enterprise SSO",
     "capabilities": [
