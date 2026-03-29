@@ -22,6 +22,8 @@ This repository publishes a Codex-native marketplace of focused Scalekit auth pl
 
 Point Codex at [`./.agents/plugins/marketplace.json`](/Users/saif/Projects/ai-first/codex-auth-stack/.agents/plugins/marketplace.json) as a local marketplace source, then install the plugin that matches your use case.
 
+This repository is currently meant to be cloned locally before use. The marketplace entries use local plugin paths like `./plugins/mcp-auth`, so Codex resolves them from your local checkout of this repository.
+
 Each plugin includes invocation examples in its own README. Typical prompts look like:
 
 - `Add Scalekit OAuth 2.1 auth to this MCP server`
@@ -31,15 +33,19 @@ Each plugin includes invocation examples in its own README. Typical prompts look
 ## Install In Codex
 
 1. Clone this repository locally.
-2. In Codex, add a local plugin marketplace that points to [`/Users/saif/Projects/ai-first/codex-auth-stack/.agents/plugins/marketplace.json`](/Users/saif/Projects/ai-first/codex-auth-stack/.agents/plugins/marketplace.json).
-3. Open the marketplace in Codex and install one of the plugins:
+2. Keep the marketplace file at `./.agents/plugins/marketplace.json` inside the cloned repo.
+3. Restart Codex.
+4. Open the Plugin Directory in Codex.
+5. In the marketplace picker, choose `Scalekit Auth Stack`.
+6. Install one of the plugins:
    - `mcp-auth`
    - `agent-auth`
    - `modular-sso`
    - `modular-scim`
    - `full-stack-auth`
-4. Restart or reload Codex if the client asks for it.
-5. Try one of the sample prompts from the installed plugin README.
+7. Try one of the sample prompts from the installed plugin README.
+
+This follows the official Codex plugin docs for repo marketplaces: keep the marketplace at `$REPO_ROOT/.agents/plugins/marketplace.json`, restart Codex, then open the plugin directory and choose that marketplace. Reference: [Build plugins](https://developers.openai.com/codex/plugins/build).
 
 ## Quick Smoke Test
 
@@ -50,6 +56,18 @@ Add Scalekit OAuth 2.1 auth to this MCP server
 ```
 
 You should see Codex pick up the `adding-mcp-oauth` skill and guide the workflow described in [`plugins/mcp-auth/README.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/README.md).
+
+## Why Clone First
+
+Today, this marketplace is shared as a GitHub repository that users clone locally before adding it to Codex.
+
+That is because Codex has not yet shipped:
+
+- official public plugin publishing
+- adding plugins to the official Plugin Directory
+- self-serve plugin publishing and management
+
+Once Codex supports public plugin publishing and self-serve directory management, this repo can evolve from a clone-first local marketplace into a more direct install experience.
 
 ## Validation
 
