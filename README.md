@@ -2,8 +2,6 @@
 
 This repository publishes a Codex-native marketplace of focused Scalekit auth plugins. The catalog is modular so teams can install only the capability they need instead of adopting one monolithic auth package.
 
-![Scalekit Auth Stack demo](./images/scalekit-authstack-demo.gif)
-
 ## Included Plugins
 
 - `mcp-auth`: OAuth 2.1 authorization for MCP servers, plus framework-specific guidance for FastMCP, Express, and FastAPI servers.
