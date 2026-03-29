@@ -13,6 +13,12 @@
 
 - `implementing-scim-provisioning`
 
+## Additional Skills
+
+- `modular-scim`
+- `implementing-admin-portal`
+- `production-readiness-scalekit`
+
 Try asking Codex:
 
 - `Add Scalekit SCIM provisioning to this app`
@@ -25,6 +31,12 @@ Try asking Codex:
 - `SCALEKIT_CLIENT_ID`
 - `SCALEKIT_CLIENT_SECRET`
 - `SCALEKIT_WEBHOOK_SECRET`
+
+The plugin also ships [`./.mcp.json`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/modular-scim/.mcp.json), which points at the remote Scalekit MCP server.
+
+## Reference Docs
+
+- [`references/redirects.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/modular-scim/references/redirects.md)
 
 ## Troubleshooting
 

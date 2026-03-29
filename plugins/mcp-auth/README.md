@@ -13,6 +13,14 @@
 
 - `adding-mcp-oauth`
 
+## Additional Skills
+
+- `mcp-auth`
+- `mcp-oauth-fastmcp`
+- `express-mcp-server`
+- `fastapi-fastmcp`
+- `production-readiness-scalekit`
+
 Try asking Codex:
 
 - `Add Scalekit OAuth 2.1 auth to this MCP server`
@@ -26,6 +34,12 @@ Try asking Codex:
 - `SCALEKIT_CLIENT_SECRET`
 
 The plugin also ships [`./.mcp.json`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/.mcp.json), which points at the remote Scalekit MCP server.
+
+## Reference Docs
+
+- [`references/scalekit-mcp-server.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/references/scalekit-mcp-server.md)
+- [`references/bring-your-own-auth.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/references/bring-your-own-auth.md)
+- [`references/redirects.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/references/redirects.md)
 
 ## Troubleshooting
 

@@ -4,11 +4,17 @@ This repository publishes a Codex-native marketplace of focused Scalekit auth pl
 
 ## Included Plugins
 
-- `mcp-auth`: OAuth 2.1 authorization for MCP servers and AI-host integrations
-- `agent-auth`: connected-account flows for agents acting in third-party apps
-- `modular-sso`: enterprise SSO for products that already manage users and sessions
-- `modular-scim`: directory sync, provisioning, and deprovisioning workflows
-- `full-stack-auth`: end-to-end login, callback, session, refresh, and logout guidance
+- `mcp-auth`: OAuth 2.1 authorization for MCP servers, plus framework-specific guidance for FastMCP, Express, and FastAPI servers.
+- `agent-auth`: connected-account flows for agents acting in third-party apps, plus connector references and MCP server patterns.
+- `modular-sso`: enterprise SSO for products that already manage users and sessions, including admin portal and production-readiness guidance.
+- `modular-scim`: directory sync, provisioning, and deprovisioning workflows with operational guidance for real-world deployments.
+- `full-stack-auth`: end-to-end login, callback, session, refresh, logout, migration, and framework-specific auth guidance across common stacks.
+
+## Why This Is Useful
+
+Setting up auth for B2B apps, AI products, agents, and MCP servers is usually a long chain of small implementation decisions. This marketplace turns that work into focused Codex-installable workflows with reusable references, production-readiness checklists, and stack-specific implementation guides.
+
+The current Codex version ships the same five core plugins as the Claude reference repo, along with deeper skill coverage, reference docs, shared MCP connectivity, and a one-command bootstrap installer for local setup.
 
 ## Marketplace Layout
 
@@ -16,7 +22,8 @@ This repository publishes a Codex-native marketplace of focused Scalekit auth pl
 - `plugins/<plugin-name>/.codex-plugin/plugin.json` defines plugin metadata
 - `plugins/<plugin-name>/README.md` explains usage, setup, and troubleshooting
 - `plugins/<plugin-name>/skills/<skill-name>/SKILL.md` contains the primary Codex-facing workflow
-- `plugins/mcp-auth/.mcp.json` wires the remote Scalekit MCP server for the MCP plugin
+- `plugins/<plugin-name>/references/` contains deeper docs loaded on demand by the skills
+- `plugins/<plugin-name>/.mcp.json` wires the remote Scalekit MCP server where applicable
 
 ## Using The Marketplace
 
@@ -24,7 +31,7 @@ Point Codex at [`./.agents/plugins/marketplace.json`](/Users/saif/Projects/ai-fi
 
 For end users, the intended experience is a one-command bootstrap install that places the marketplace in the right local Codex directory and wires it up safely.
 
-Each plugin includes invocation examples in its own README. Typical prompts look like:
+Each plugin includes invocation examples in its own README, and most plugins now ship multiple secondary skills plus reference docs for deeper implementation help. Typical prompts look like:
 
 - `Add Scalekit OAuth 2.1 auth to this MCP server`
 - `Integrate Scalekit agent auth for Gmail and Slack`
@@ -85,6 +92,14 @@ Add Scalekit OAuth 2.1 auth to this MCP server
 
 You should see Codex pick up the `adding-mcp-oauth` skill and guide the workflow described in [`plugins/mcp-auth/README.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/README.md).
 
+For a broader smoke test, confirm each plugin exposes more than one workflow:
+
+- `mcp-auth`: check FastMCP, Express, or production-readiness skills
+- `agent-auth`: check connector guidance and MCP server guidance
+- `full-stack-auth`: check a framework-specific skill like Next.js or FastAPI
+- `modular-sso`: check admin-portal or production-readiness guidance
+- `modular-scim`: check production-readiness guidance or the modular SCIM skill
+
 ## Why This Installs Locally
 
 Today, Codex plugins and marketplaces are still local installs even when they start from a GitHub repository.
@@ -106,6 +121,12 @@ python3 scripts/validate_marketplace.py
 ```
 
 The validator checks marketplace source paths, plugin manifests, README presence, skill presence, and name consistency.
+
+It also enforces the current portable parity floor:
+
+- each marketplace-listed plugin must have at least two skills
+- each marketplace-listed plugin must have at least one reference document
+- every manifest that declares MCP support must point to a real `.mcp.json`
 
 ## Notes
 

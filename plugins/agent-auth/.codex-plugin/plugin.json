@@ -17,10 +17,11 @@
     "connected-accounts"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Agent Auth",
     "shortDescription": "Connect agents to third-party apps safely.",
-    "longDescription": "Guides Codex through connected-account creation, user authorization, token retrieval, and downstream API use for Scalekit Agent Auth.",
+    "longDescription": "Guides Codex through connected-account creation, user authorization, token retrieval, downstream API use, agent MCP server patterns, and production-readiness checks for Scalekit Agent Auth.",
     "developerName": "Scalekit",
     "category": "Agent Auth",
     "capabilities": [

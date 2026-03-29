@@ -18,10 +18,11 @@
     "groups"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Modular SCIM",
     "shortDescription": "Add provisioning and lifecycle sync with Scalekit.",
-    "longDescription": "Covers SCIM-style provisioning workflows with Scalekit Directory API sync, webhook handling, event mapping, and operational guardrails.",
+    "longDescription": "Covers SCIM-style provisioning workflows with Scalekit Directory API sync, webhook handling, admin portal setup, production-readiness checks, event mapping, and operational guardrails.",
     "developerName": "Scalekit",
     "category": "Provisioning",
     "capabilities": [
