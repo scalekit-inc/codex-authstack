@@ -1,135 +1,165 @@
-# Scalekit Auth Stack for Codex
+<div align="center">
 
-This repository publishes a Codex-native marketplace of focused Scalekit auth plugins. The catalog is modular so teams can install only the capability they need instead of adopting one monolithic auth package.
+<img src="./images/scalekit.jpg" alt="Scalekit" height="64">
 
-## Included Plugins
+<p><strong>Scalekit Auth Plugins for OpenAI Codex — the auth stack for agents.</strong><br>
+Add SSO, SCIM, MCP Auth, agent auth, and tool-calling to your Codex projects.</p>
 
-- `mcp-auth`: OAuth 2.1 authorization for MCP servers, plus framework-specific guidance for FastMCP, Express, and FastAPI servers.
-- `agent-auth`: connected-account flows for agents acting in third-party apps, plus connector references and MCP server patterns.
-- `modular-sso`: enterprise SSO for products that already manage users and sessions, including admin portal and production-readiness guidance.
-- `modular-scim`: directory sync, provisioning, and deprovisioning workflows with operational guidance for real-world deployments.
-- `full-stack-auth`: end-to-end login, callback, session, refresh, logout, migration, and framework-specific auth guidance across common stacks.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/scalekit-inc/codex-authstack/pulls)
 
-## Why This Is Useful
+**[📖 Documentation](https://docs.scalekit.com)** · **[💬 Slack](https://join.slack.com/t/scalekit-community/shared_invite/zt-3gsxwr4hc-0tvhwT2b_qgVSIZQBQCWRw)**
 
-Setting up auth for B2B apps, AI products, agents, and MCP servers is usually a long chain of small implementation decisions. This marketplace turns that work into focused Codex-installable workflows with reusable references, production-readiness checklists, and stack-specific implementation guides.
+</div>
 
-The current Codex version ships the same five core plugins as the Claude reference repo, along with deeper skill coverage, reference docs, shared MCP connectivity, and a one-command bootstrap installer for local setup.
+---
 
-## Marketplace Layout
+This repository publishes a Codex-native marketplace of Scalekit auth plugins — focused auth packages that add SSO, SCIM, MCP auth, agent auth, and tool-calling to your projects.
 
-- `.agents/plugins/marketplace.json` is the marketplace source of truth
-- `plugins/<plugin-name>/.codex-plugin/plugin.json` defines plugin metadata
-- `plugins/<plugin-name>/README.md` explains usage, setup, and troubleshooting
-- `plugins/<plugin-name>/skills/<skill-name>/SKILL.md` contains the primary Codex-facing workflow
-- `plugins/<plugin-name>/references/` contains deeper docs loaded on demand by the skills
-- `plugins/<plugin-name>/.mcp.json` wires the remote Scalekit MCP server where applicable
+---
 
-## Using The Marketplace
+### Included Plugins
 
-Point Codex at [`./.agents/plugins/marketplace.json`](/Users/saif/Projects/ai-first/codex-auth-stack/.agents/plugins/marketplace.json) as a local marketplace source, then install the plugin that matches your use case.
+| Plugin | Description |
+|--------|-------------|
+| `mcp-auth` | OAuth 2.1 authorization for MCP servers — discovery endpoint, token validation, scope enforcement |
+| `agent-auth` | Scalekit Agent Auth so AI agents can act in third-party apps (Gmail, Slack, Calendar, Notion) on behalf of users |
+| `full-stack-auth` | Full-stack web authentication — login pages, sessions, protected routes, RBAC, and more |
+| `modular-sso` | Enterprise SSO with 20+ identity providers (Okta, Entra ID, JumpCloud) via SAML/OIDC |
+| `modular-scim` | SCIM 2.0 user provisioning, group sync, and directory lifecycle management |
 
-For end users, the intended experience is a one-command bootstrap install that places the marketplace in the right local Codex directory and wires it up safely.
+---
 
-Each plugin includes invocation examples in its own README, and most plugins now ship multiple secondary skills plus reference docs for deeper implementation help. Typical prompts look like:
+### Installation
 
-- `Add Scalekit OAuth 2.1 auth to this MCP server`
-- `Integrate Scalekit agent auth for Gmail and Slack`
-- `Implement enterprise SSO with Scalekit in this app`
-
-## Install In Codex
-
-The simplest install flow is a single command:
+Codex doesn't have a public plugin marketplace yet. Use the one-command bootstrap installer to set up the marketplace locally:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/scalekit-inc/codex-authstack/main/install.sh | bash
 ```
 
-That bootstrap installer:
+This installer:
 
-- downloads the repo from GitHub
-- copies it to `~/.codex/marketplaces/scalekit-auth-stack`
-- creates or updates `~/.agents/plugins/marketplace.json` when it is safe to do so
-- avoids overwriting someone else's personal Codex marketplace setup
-- tells you exactly what to do manually if it skips modifying your personal marketplace file
+1. Downloads the repository from GitHub
+2. Copies it to `~/.codex/marketplaces/scalekit-auth-stack`
+3. Creates or updates `~/.agents/plugins/marketplace.json` when safe to do so
+4. Tells you exactly what to do manually if it skips modifying your personal marketplace file
 
-If you are developing locally from a clone, you can still run:
+#### Local Development
+
+If you are developing locally from a clone:
 
 ```bash
 ./scripts/install_codex_marketplace.sh
 ```
 
-That local installer:
+This script:
 
-- copies this repo to `~/.codex/marketplaces/scalekit-auth-stack`
-- creates or updates `~/.agents/plugins/marketplace.json` when it is safe to do so
-- tells you whether Codex can immediately see `Scalekit Auth Stack` in the Plugin Directory
+1. Copies this repo to `~/.codex/marketplaces/scalekit-auth-stack`
+2. Creates or updates `~/.agents/plugins/marketplace.json` when safe to do so
+3. Tells you whether Codex can immediately see `Scalekit Auth Stack` in the Plugin Directory
+
+---
+
+### Post-Install
 
 After the script runs:
 
-1. Restart Codex.
-2. Open the Plugin Directory in Codex.
-3. In the marketplace picker, choose `Scalekit Auth Stack`.
+1. Restart Codex
+2. Open the Plugin Directory in Codex
+3. In the marketplace picker, choose `Scalekit Auth Stack`
 4. Install one of the plugins:
    - `mcp-auth`
    - `agent-auth`
    - `modular-sso`
    - `modular-scim`
    - `full-stack-auth`
-5. Try one of the sample prompts from the installed plugin README.
+5. Try one of the sample prompts from the installed plugin README
 
-If you prefer the fully manual route, you can still clone this repo and use the repo-local marketplace at `./.agents/plugins/marketplace.json`.
+---
 
-This follows the official Codex plugin docs for repo marketplaces: keep the marketplace at `$REPO_ROOT/.agents/plugins/marketplace.json`, restart Codex, then open the plugin directory and choose that marketplace. Reference: [Build plugins](https://developers.openai.com/codex/plugins/build).
+### Plugin Details
 
-## Quick Smoke Test
+#### mcp-auth
 
-After installing `mcp-auth`, ask Codex:
+The `mcp-auth` plugin adds production-ready OAuth 2.1 authorization to any MCP server. Once installed, Codex will:
 
-```text
-Add Scalekit OAuth 2.1 auth to this MCP server
-```
+- Serve a `/.well-known/oauth-protected-resource` discovery endpoint
+- Add Bearer token validation middleware that checks audience, issuer, expiry, and scopes
+- Wire up per-tool scope enforcement
+- Support both **Node.js** (Express / FastMCP) and **Python** (FastAPI / FastMCP)
 
-You should see Codex pick up the `adding-mcp-oauth` skill and guide the workflow described in [`plugins/mcp-auth/README.md`](/Users/saif/Projects/ai-first/codex-auth-stack/plugins/mcp-auth/README.md).
+#### agent-auth
 
-For a broader smoke test, confirm each plugin exposes more than one workflow:
+The `agent-auth` plugin implements Scalekit Agent Auth — so your AI agents can act on behalf of users in Gmail, Slack, Notion, Google Calendar, and 40+ other connected services.
 
-- `mcp-auth`: check FastMCP, Express, or production-readiness skills
-- `agent-auth`: check connector guidance and MCP server guidance
-- `full-stack-auth`: check a framework-specific skill like Next.js or FastAPI
-- `modular-sso`: check admin-portal or production-readiness guidance
-- `modular-scim`: check production-readiness guidance or the modular SCIM skill
+#### full-stack-auth
 
-## Why This Installs Locally
+The `full-stack-auth` plugin adds end-to-end authentication to B2B and AI apps using Scalekit. One integration enables: social sign-in, magic links, enterprise SSO, workspaces, MCP authentication, SCIM provisioning, and user management.
 
-Today, Codex plugins and marketplaces are still local installs even when they start from a GitHub repository.
+#### modular-sso
 
-That is because Codex has not yet shipped:
+The `modular-sso` plugin integrates enterprise SSO with existing user management systems. It handles IdP-initiated and SP-initiated login, attribute mapping, JIT provisioning, and enterprise customer onboarding via the admin portal.
 
-- official public plugin publishing
-- adding plugins to the official Plugin Directory
-- self-serve plugin publishing and management
+#### modular-scim
 
-Once Codex supports public plugin publishing and self-serve directory management, this repo can evolve from a bootstrap-to-local install into a more direct install experience.
+The `modular-scim` plugin adds SCIM 2.0 directory sync to applications. It handles real-time user provisioning, deprovisioning, and group membership changes from enterprise identity providers.
 
-## Validation
+---
 
-Run the local validator before packaging or publishing changes:
+### Prerequisites
+
+- [Scalekit account](https://scalekit.com) with `client_id` and `client_secret`
+- Codex CLI installed and configured
+- Project where you want to add authentication
+
+---
+
+### Validation
+
+Run the validation script to verify your marketplace setup:
 
 ```bash
-python3 scripts/validate_marketplace.py
+python scripts/validate_marketplace.py
 ```
 
-The validator checks marketplace source paths, plugin manifests, README presence, skill presence, and name consistency.
+This checks:
+- Marketplace manifest structure
+- Plugin manifests and required fields
+- Skill files and frontmatter
+- Reference file depth
 
-It also enforces the current portable parity floor:
+---
 
-- each marketplace-listed plugin must have at least two skills
-- each marketplace-listed plugin must have at least one reference document
-- every manifest that declares MCP support must point to a real `.mcp.json`
+### Helpful Links
 
-## Notes
+#### Documentation
 
-- Hooks are intentionally omitted because Codex does not support them yet.
-- This is a Codex adaptation of the existing Scalekit auth marketplace, not a byte-for-byte Claude plugin port.
-- The repo contains no secrets; plugin docs reference environment variables and dashboard setup instead of hardcoded credentials.
+- [Scalekit Documentation](https://docs.scalekit.com) — Complete guides and API reference
+- [SSO Quickstart](https://docs.scalekit.com/sso/quickstart/) — Implement enterprise SSO
+- [MCP Auth Guide](https://docs.scalekit.com/mcp-auth/quickstart/) — Secure MCP servers
+- [Agent Auth Guide](https://docs.scalekit.com/agent-auth/quickstart/) — Authentication for AI agents
+
+#### Resources
+
+- [Admin Portal](https://app.scalekit.com) — Manage your Scalekit account
+- [API Reference](https://docs.scalekit.com/apis) — Complete API documentation
+- [Code Examples](https://docs.scalekit.com/directory/code-examples/) — Ready-to-use snippets
+
+---
+
+### Contributing
+
+Contributions are welcome! Please see [AGENTS.md](AGENTS.md) for contribution guidelines.
+
+1. Fork this repository
+2. Create a branch — `git checkout -b feature/my-plugin`
+3. Make your changes following the plugin structure
+4. Run validation — `python scripts/validate_marketplace.py`
+5. Open a Pull Request
+
+---
+
+### License
+
+This project is licensed under the **MIT license**. See the [LICENSE](LICENSE) file for more information.
