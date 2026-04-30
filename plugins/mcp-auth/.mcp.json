@@ -1,7 +1,8 @@
 {
   "mcpServers": {
     "scalekit": {
-      "url": "https://mcp.scalekit.com"
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.scalekit.com"]
     }
   }
 }
