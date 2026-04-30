@@ -74,7 +74,11 @@ After the script runs:
    - `modular-sso`
    - `modular-scim`
    - `full-stack-auth`
-5. Try one of the sample prompts from the installed plugin README
+5. Run `codex mcp login scalekit` if the Scalekit MCP tools do not appear
+6. Restart Codex so the session reloads the authenticated MCP tool list
+7. Try one of the sample prompts from the installed plugin README
+
+If `/mcp` shows `Auth: Unsupported` but also lists Scalekit tools, the server is usable. If it shows `Tools: (none)`, authenticate with `codex mcp login scalekit` and restart Codex.
 
 ---
 

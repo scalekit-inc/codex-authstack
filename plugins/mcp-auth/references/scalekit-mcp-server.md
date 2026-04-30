@@ -441,12 +441,14 @@ The Scalekit MCP server is already hosted and ready to use:
 {
   "mcpServers": {
     "scalekit": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.scalekit.com/"]
+      "type": "http",
+      "url": "https://mcp.scalekit.com/"
     }
   }
 }
 ```
+
+For Codex, authenticate once with `codex mcp login scalekit` and restart Codex so the session reloads the authenticated tool catalog.
 
 ### Running Your Own Instance
 
