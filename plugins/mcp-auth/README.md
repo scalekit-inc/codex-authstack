@@ -44,5 +44,7 @@ The plugin also ships [`./.mcp.json`](/Users/saif/Projects/ai-first/codex-auth-s
 ## Troubleshooting
 
 - OAuth-capable MCP auth requires HTTP transport, not stdio transport.
+- For Codex, run `codex mcp login scalekit` after installing the plugin, then restart Codex so the current session reloads MCP tools.
+- Codex may display `Auth: Unsupported` for OAuth-backed HTTP MCP servers; treat `Tools: (none)` as the failure signal.
 - Missing or invalid bearer tokens should return `401` plus a `WWW-Authenticate` header that points hosts at your protected-resource metadata.
 - Keep dashboard resource settings and your metadata endpoint aligned before debugging token validation.
