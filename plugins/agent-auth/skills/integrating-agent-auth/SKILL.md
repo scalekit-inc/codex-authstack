@@ -95,3 +95,9 @@ Always refresh your view of the connected account immediately before making the 
 - In web apps, redirect users to the authorization link instead of only printing it.
 - For agent workflows, keep user identity stable so the same person maps to the same connected account record.
 - Review token handling separately from third-party API logic so auth failures are easy to isolate.
+
+## When to switch skills
+
+- Use `agent-auth` for the full integration walkthrough with Gmail examples and framework agents.
+- Use `building-agent-mcp-server` when the user wants to expose Agent Auth tools over the MCP protocol.
+- Use `production-readiness-scalekit` when the user is going live or needs a pre-launch checklist.

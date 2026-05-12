@@ -69,3 +69,9 @@ const authUrl = scalekit.getAuthorizationUrl(
 - Treat IdP-initiated login as a translation into a secure SP-initiated flow, not as a shortcut around normal callback handling.
 - Keep enterprise onboarding decisions explicit: who creates the connection, how users are mapped, and where login is initiated.
 - Map validated claims into the app's existing user model and session model instead of duplicating local account logic.
+
+## When to switch skills
+
+- Use `full-stack-auth` (in the full-stack-auth plugin) when Scalekit should manage the full auth lifecycle (login, sessions, users).
+- Use `modular-scim` (in the modular-scim plugin) for SCIM provisioning alongside SSO.
+- Use `production-readiness-scalekit` for a pre-launch SSO checklist.
