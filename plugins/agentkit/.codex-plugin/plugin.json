@@ -1,0 +1,33 @@
+{
+  "name": "agentkit",
+  "version": "2.0.0",
+  "description": "Authentication for AI agents. OAuth flows, token vault, 40+ connectors, tool discovery, and live testing.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com/agentkit/overview.md",
+  "repository": "https://github.com/scalekit-inc/codex-authstack",
+  "license": "MIT",
+  "keywords": ["scalekit", "agentkit", "agent-auth", "oauth", "connectors", "tool-calling"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AgentKit",
+    "shortDescription": "Connect agents to third-party apps safely.",
+    "longDescription": "Authentication for AI agents. OAuth flows, token vault, 40+ connectors (Gmail, Slack, Salesforce, etc.), tool discovery, and live testing — so agents can act on behalf of users.",
+    "developerName": "Scalekit",
+    "category": "Agent Auth",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://docs.scalekit.com/agentkit/overview.md",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Integrate AgentKit for Gmail or Slack.",
+      "Set up a connected account flow for this agent.",
+      "Discover available tools for a connector."
+    ],
+    "brandColor": "#1D4ED8"
+  }
+}
