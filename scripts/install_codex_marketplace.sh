@@ -9,12 +9,20 @@ INSTALL_ROOT="${HOME}/.codex/marketplaces/scalekit-auth-stack"
 PERSONAL_MARKETPLACE="${HOME}/.agents/plugins/marketplace.json"
 FORCE_PERSONAL_MARKETPLACE="${FORCE_PERSONAL_MARKETPLACE:-0}"
 
+# Old plugin names from v1.x (now consolidated into agentkit + saaskit)
+OLD_PLUGINS=("mcp-auth" "agent-auth" "modular-sso" "modular-scim" "full-stack-auth")
+
 mkdir -p "$(dirname "$INSTALL_ROOT")"
 rm -rf "$INSTALL_ROOT"
 mkdir -p "$INSTALL_ROOT"
 
 cp -R "$REPO_ROOT"/. "$INSTALL_ROOT"
 rm -rf "$INSTALL_ROOT/.git"
+
+# Clean up old v1.x plugin directories if they exist from a previous install
+for old in "${OLD_PLUGINS[@]}"; do
+  rm -rf "$INSTALL_ROOT/plugins/$old"
+done
 
 PLUGIN_BASE="./.codex/marketplaces/scalekit-auth-stack/plugins"
 
@@ -28,22 +36,10 @@ write_personal_marketplace() {
   },
   "plugins": [
     {
-      "name": "mcp-auth",
+      "name": "agentkit",
       "source": {
         "source": "local",
-        "path": "${PLUGIN_BASE}/mcp-auth"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "MCP Security"
-    },
-    {
-      "name": "agent-auth",
-      "source": {
-        "source": "local",
-        "path": "${PLUGIN_BASE}/agent-auth"
+        "path": "${PLUGIN_BASE}/agentkit"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -52,34 +48,10 @@ write_personal_marketplace() {
       "category": "Agent Auth"
     },
     {
-      "name": "modular-sso",
+      "name": "saaskit",
       "source": {
         "source": "local",
-        "path": "${PLUGIN_BASE}/modular-sso"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Enterprise SSO"
-    },
-    {
-      "name": "modular-scim",
-      "source": {
-        "source": "local",
-        "path": "${PLUGIN_BASE}/modular-scim"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Provisioning"
-    },
-    {
-      "name": "full-stack-auth",
-      "source": {
-        "source": "local",
-        "path": "${PLUGIN_BASE}/full-stack-auth"
+        "path": "${PLUGIN_BASE}/saaskit"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -135,22 +107,30 @@ if [[ "$PERSONAL_RESULT" == "created" ]]; then
 Created personal Codex marketplace:
   $PERSONAL_MARKETPLACE
 
+Available plugins:
+  agentkit  — AI agent authentication (connectors, tool discovery, token vault)
+  saaskit   — B2B SaaS authentication (login, SSO, SCIM, RBAC, MCP server auth)
+
 Next steps:
 1. Restart Codex.
 2. Open the Plugin Directory.
 3. Choose "Scalekit Auth Stack".
-4. Install one of the plugins.
+4. Install agentkit, saaskit, or both.
 EOF
 elif [[ "$PERSONAL_RESULT" == "updated" ]]; then
   cat <<EOF
 Updated personal Codex marketplace:
   $PERSONAL_MARKETPLACE
 
+Available plugins:
+  agentkit  — AI agent authentication (connectors, tool discovery, token vault)
+  saaskit   — B2B SaaS authentication (login, SSO, SCIM, RBAC, MCP server auth)
+
 Next steps:
 1. Restart Codex.
 2. Open the Plugin Directory.
 3. Choose "Scalekit Auth Stack".
-4. Install one of the plugins.
+4. Install agentkit, saaskit, or both.
 EOF
 else
   cat <<EOF
@@ -166,7 +146,7 @@ What you can do next:
 2. Open the Plugin Directory.
 3. Add or select the marketplace file at:
    $INSTALL_ROOT/.agents/plugins/marketplace.json
-4. Choose "Scalekit Auth Stack" and install one of the plugins.
+4. Choose "Scalekit Auth Stack" and install agentkit, saaskit, or both.
 
 If you intentionally want this installer to replace your personal marketplace file, re-run:
   FORCE_PERSONAL_MARKETPLACE=1 ./scripts/install_codex_marketplace.sh
