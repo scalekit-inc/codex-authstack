@@ -42,7 +42,7 @@ Skills:
 - `exposing-agentkit-via-mcp` — expose AgentKit tools through MCP for compatible runtimes
 - `production-readiness-agentkit` — production readiness checklist for AgentKit integrations
 
-References: `agent-connectors/` (connector docs), `connected-accounts.md`, `code-samples.md`, `providers.md`, `connections.md`, `byoc.md`, `redirects.md`
+References: `agent-connectors/` (connector docs), `connected-accounts.md`, `code-samples.md`, `connectors.md`, `connections.md`, `byoc.md`, `redirects.md`, `tool-discovery.md`
 
 ### saaskit
 
@@ -60,8 +60,9 @@ Skills:
 - `adding-api-auth` — API keys and client credentials for M2M auth
 - `migrating-to-saaskit` — incremental migration from existing auth systems
 - `production-readiness-saaskit` — unified production checklist
+- `testing-auth-setup` — validates auth integration via dryrun CLI
 
-References: `bring-your-own-auth.md`, `redirects.md`, `scalekit-logs.md`, `scalekit-mcp-server.md`, `scalekit-user-profiles.md`
+References: `bring-your-own-auth.md`, `redirects.md`, `scalekit-logs.md`, `scalekit-mcp-server.md`, `scalekit-user-profiles.md`, `session-management-patterns.md`, `setup-scalekit.md`, `mcp-auth-troubleshooting.md`
 
 ## Non-negotiable rules
 

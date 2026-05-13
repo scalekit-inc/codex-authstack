@@ -15,6 +15,7 @@ Production-ready auth for B2B SaaS apps. This plugin brings Scalekit SaaSKit int
 - `migrating-to-saaskit` — Migration planning from Auth0, Firebase, Cognito, or custom auth.
 - `adding-api-auth` — API keys (org/user scoped) and OAuth 2.0 client credentials.
 - `production-readiness-saaskit` — Unified production checklist across all SaaSKit domains.
+- `testing-auth-setup` — Validates auth integration by running the Scalekit dryrun CLI.
 
 ## Configuration
 
