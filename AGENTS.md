@@ -7,7 +7,7 @@ Any agent changing this repo must follow this document.
 
 Everything under `plugins/` is a Codex plugin. A plugin includes skills and reference files that teach the agent how to integrate Scalekit authentication.
 
-Codex does not have a public plugin marketplace. This repo ships with a bootstrap installer (`install.sh`) and a local install script (`scripts/install_codex_marketplace.sh`) that copy plugins into `~/.codex/marketplaces/scalekit-auth-stack`.
+Codex does not have a public plugin marketplace. This repo ships with a bootstrap installer (`install.sh`) and a local install script (`scripts/install.sh`) that copy plugins into `~/.codex/marketplaces/scalekit-auth-stack`.
 
 ## Monorepo layout
 
@@ -23,7 +23,7 @@ codex-authstack/
 │       ├── skills/
 │       └── references/
 ├── scripts/
-│   ├── install_codex_marketplace.sh
+│   ├── install.sh
 │   └── validate_marketplace.py
 ├── install.sh                    # One-command bootstrap installer
 ├── AGENTS.md                     # This file
@@ -106,7 +106,7 @@ This checks marketplace manifest structure, plugin manifests, skill files, front
 
 ## Local testing
 
-1. Run `./scripts/install_codex_marketplace.sh` to copy plugins to `~/.codex/marketplaces/scalekit-auth-stack`
+1. Run `./scripts/install.sh` to copy plugins to `~/.codex/marketplaces/scalekit-auth-stack`
 2. Restart Codex
 3. Open Plugin Directory and select `Scalekit Auth Stack`
 4. Install `agentkit` or `saaskit`

@@ -47,7 +47,7 @@ This installer:
 If you are developing locally from a clone:
 
 ```bash
-./scripts/install_codex_marketplace.sh
+./scripts/install.sh
 ```
 
 This script:

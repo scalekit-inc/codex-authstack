@@ -149,6 +149,6 @@ What you can do next:
 4. Choose "Scalekit Auth Stack" and install agentkit, saaskit, or both.
 
 If you intentionally want this installer to replace your personal marketplace file, re-run:
-  FORCE_PERSONAL_MARKETPLACE=1 ./scripts/install_codex_marketplace.sh
+  FORCE_PERSONAL_MARKETPLACE=1 ./scripts/install.sh
 EOF
 fi
