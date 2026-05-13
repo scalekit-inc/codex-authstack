@@ -111,11 +111,16 @@ Available plugins:
   agentkit  — AI agent authentication (connectors, tool discovery, token vault)
   saaskit   — B2B SaaS authentication (login, SSO, SCIM, RBAC, MCP server auth)
 
-Next steps:
-1. Restart Codex.
+To activate the plugins in Codex:
+1. Restart Codex (or reload the session).
 2. Open the Plugin Directory.
-3. Choose "Scalekit Auth Stack".
+3. Select "Scalekit Auth Stack" as your marketplace.
 4. Install agentkit, saaskit, or both.
+5. Set update policy to "Auto-update (recommended)" to stay current.
+
+To verify:
+  Check the Plugin Directory shows agentkit and saaskit as installed.
+  Try a skill: ask "help me integrate agentkit" or "test my auth setup".
 EOF
 elif [[ "$PERSONAL_RESULT" == "updated" ]]; then
   cat <<EOF
@@ -126,11 +131,16 @@ Available plugins:
   agentkit  — AI agent authentication (connectors, tool discovery, token vault)
   saaskit   — B2B SaaS authentication (login, SSO, SCIM, RBAC, MCP server auth)
 
-Next steps:
-1. Restart Codex.
+To activate the plugins in Codex:
+1. Restart Codex (or reload the session).
 2. Open the Plugin Directory.
-3. Choose "Scalekit Auth Stack".
+3. Select "Scalekit Auth Stack" as your marketplace.
 4. Install agentkit, saaskit, or both.
+5. Set update policy to "Auto-update (recommended)" to stay current.
+
+To verify:
+  Check the Plugin Directory shows agentkit and saaskit as installed.
+  Try a skill: ask "help me integrate agentkit" or "test my auth setup".
 EOF
 else
   cat <<EOF
@@ -142,11 +152,16 @@ Reason:
 - This installer intentionally avoids overwriting someone else's personal Codex marketplace setup.
 
 What you can do next:
-1. Restart Codex.
+1. Restart Codex (or reload the session).
 2. Open the Plugin Directory.
 3. Add or select the marketplace file at:
    $INSTALL_ROOT/.agents/plugins/marketplace.json
-4. Choose "Scalekit Auth Stack" and install agentkit, saaskit, or both.
+4. Select "Scalekit Auth Stack" and install agentkit, saaskit, or both.
+5. Set update policy to "Auto-update (recommended)" to stay current.
+
+To verify:
+  Check the Plugin Directory shows agentkit and saaskit as installed.
+  Try a skill: ask "help me integrate agentkit" or "test my auth setup".
 
 If you intentionally want this installer to replace your personal marketplace file, re-run:
   FORCE_PERSONAL_MARKETPLACE=1 ./scripts/install.sh
