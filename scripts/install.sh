@@ -167,3 +167,15 @@ If you intentionally want this installer to replace your personal marketplace fi
   FORCE_PERSONAL_MARKETPLACE=1 ./scripts/install.sh
 EOF
 fi
+
+cat <<'EOF'
+
+Optional setup:
+
+  To enable lifecycle hooks, add this to your Codex config.toml:
+    [features]
+    codex_hooks = true
+
+  To authenticate the Scalekit MCP server for Codex CLI:
+    codex mcp login scalekit
+EOF
