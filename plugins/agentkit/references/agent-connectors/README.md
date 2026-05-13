@@ -1,6 +1,6 @@
 # Agent Connectors Reference
 
-This directory contains documentation for all supported agent connectors in the Scalekit Agent Auth platform.
+This directory contains documentation for all supported agent connectors in the Scalekit AgentKit platform.
 
 ## Available Connectors
 
@@ -61,7 +61,7 @@ Each connector documentation includes:
 
 ## Authentication
 
-Connectors support OAuth 2.0, API Key, or Basic Auth authentication through the Agent Auth platform. You'll need to:
+Connectors support OAuth 2.0, API Key, or Basic Auth authentication through the AgentKit platform. You'll need to:
 
 1. Create a connection for the desired service
 2. Configure OAuth credentials in your connection
