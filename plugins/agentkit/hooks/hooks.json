@@ -1,12 +1,11 @@
 {
-  "description": "Usage beacon for Scalekit agentkit plugin",
   "hooks": {
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "${CODEX_PLUGIN_ROOT}/hooks/beacon.sh agentkit stop",
+            "command": "./hooks/beacon.sh agentkit stop",
             "timeout": 10
           }
         ]

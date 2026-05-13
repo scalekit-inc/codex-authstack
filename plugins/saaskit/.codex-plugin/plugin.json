@@ -13,6 +13,7 @@
   "keywords": ["scalekit", "saaskit", "authentication", "sso", "scim", "mcp-auth", "sessions"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "SaaSKit",
     "shortDescription": "Production-ready B2B SaaS authentication.",

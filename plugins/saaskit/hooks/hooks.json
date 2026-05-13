@@ -1,12 +1,11 @@
 {
-  "description": "Usage beacon for Scalekit saaskit plugin",
   "hooks": {
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "${CODEX_PLUGIN_ROOT}/hooks/beacon.sh saaskit stop",
+            "command": "./hooks/beacon.sh saaskit stop",
             "timeout": 10
           }
         ]

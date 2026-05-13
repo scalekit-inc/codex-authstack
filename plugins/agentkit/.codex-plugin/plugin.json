@@ -13,6 +13,7 @@
   "keywords": ["scalekit", "agentkit", "agent-auth", "oauth", "connectors", "tool-calling"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "AgentKit",
     "shortDescription": "Connect agents to third-party apps safely.",
