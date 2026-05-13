@@ -42,7 +42,7 @@ Skills:
 - `exposing-agentkit-via-mcp` — expose AgentKit tools through MCP for compatible runtimes
 - `production-readiness-agentkit` — production readiness checklist for AgentKit integrations
 
-References: `agent-connectors/` (connector docs), `connected-accounts.md`, `code-samples.md`, `connectors.md`, `connections.md`, `byoc.md`, `redirects.md`, `tool-discovery.md`
+References: `connected-accounts.md`, `code-samples.md`, `connectors.md`, `connections.md`, `byoc.md`, `redirects.md`, `tool-discovery.md`
 
 ### saaskit
 
