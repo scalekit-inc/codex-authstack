@@ -2,6 +2,12 @@
 
 set -euo pipefail
 
+if ! command -v codex >/dev/null 2>&1; then
+  echo "Warning: Codex CLI is not installed or not on PATH." >&2
+  echo "The plugins will be copied, but you will need Codex to use them." >&2
+  echo
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
