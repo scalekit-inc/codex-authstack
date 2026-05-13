@@ -79,7 +79,7 @@ Codex plugins differ from Claude Code and Cursor plugins:
 - **No `.claude-plugin/` or `.cursor-plugin/` directory.** Codex uses `~/.agents/plugins/marketplace.json` to discover marketplaces.
 - **No rules (`.mdc` files).** Codex does not support Cursor-style rules. Use skill content and references instead.
 - **No agents.** Codex does not support sub-agent definitions. Guidance that would be an agent in other auth stacks should be a skill or reference doc here.
-- **No hooks.** Codex does not support lifecycle hooks.
+- **Hooks.** Codex supports `hooks.json` for lifecycle hooks. Both plugins include a usage beacon hook.
 - **No commands.** Codex does not support slash commands. Skills are the only entrypoint.
 
 ## Skill authoring rules
