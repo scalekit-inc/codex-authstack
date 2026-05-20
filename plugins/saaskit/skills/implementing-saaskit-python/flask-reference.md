@@ -10,7 +10,7 @@ Reference implementation: [scalekit-inc/scalekit-flask-auth-example](https://git
 ## Step 1 — Install dependencies
 
 ```bash
-pip install scalekit-sdk python-dotenv flask
+pip install scalekit-sdk-python python-dotenv flask
 ```
 
 Add to `requirements.txt`:

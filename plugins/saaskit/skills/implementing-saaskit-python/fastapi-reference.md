@@ -10,7 +10,7 @@ Reference implementation: [scalekit-inc/scalekit-fastapi-auth-example](https://g
 ## Step 1 — Install dependencies
 
 ```bash
-pip install scalekit-sdk python-dotenv pydantic-settings starlette
+pip install scalekit-sdk-python python-dotenv pydantic-settings starlette
 ```
 
 Add to `requirements.txt`:
