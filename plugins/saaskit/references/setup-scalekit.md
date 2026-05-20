@@ -28,7 +28,15 @@ echo $SCALEKIT_CLIENT_ID
 echo $SCALEKIT_CLIENT_SECRET
 ```
 
-### 3. Install the SDK
+### 3. Install the Scalekit CLI
+
+Install the CLI globally for environment management, auth testing, and configuration commands:
+
+```bash
+npm i -g @scalekit-inc/cli
+```
+
+### 4. Install the SDK
 
 | Language | Package |
 |----------|---------|
@@ -37,7 +45,7 @@ echo $SCALEKIT_CLIENT_SECRET
 | Go | `go get github.com/scalekit-inc/scalekit-sdk-go` |
 | Java | Add `scalekit-sdk-java` to Maven/Gradle |
 
-### 4. Initialize the client
+### 5. Initialize the client
 
 **Python**
 ```python
@@ -64,7 +72,7 @@ const scalekit = new ScalekitClient(
 );
 ```
 
-### 5. Verify credentials
+### 6. Verify credentials
 
 List organizations with a small page size as the simplest verification:
 
@@ -80,7 +88,7 @@ const orgs = await scalekit.organization.listOrganizations({ pageSize: 5 });
 console.log(`Connected. Found ${orgs.organizations.length} organizations.`);
 ```
 
-### 6. Diagnose failures
+### 7. Diagnose failures
 
 If verification fails, check in this order:
 
