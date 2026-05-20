@@ -34,7 +34,7 @@ codex-authstack/
 
 ### agentkit
 
-Authentication for AI agents. OAuth flows, token vault, 40+ connectors, tool discovery.
+Authentication for AI agents. OAuth flows, token vault, 100+ connectors, tool discovery.
 
 Skills:
 - `integrating-agentkit` — core integration: SDK setup, connected accounts, OAuth flows, token fetching, agent frameworks

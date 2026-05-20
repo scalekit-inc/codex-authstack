@@ -1,7 +1,7 @@
 {
   "name": "agentkit",
   "version": "2.0.0",
-  "description": "Authentication for AI agents. OAuth flows, token vault, 40+ connectors, tool discovery, and live testing.",
+  "description": "Authentication for AI agents. OAuth flows, token vault, 100+ connectors, tool discovery, and live testing.",
   "author": {
     "name": "Scalekit Inc",
     "email": "support@scalekit.com",
@@ -17,8 +17,8 @@
   "interface": {
     "displayName": "AgentKit",
     "shortDescription": "Connect agents to third-party apps safely.",
-    "longDescription": "Authentication for AI agents. OAuth flows, token vault, 40+ connectors (Gmail, Slack, Salesforce, etc.), tool discovery, and live testing — so agents can act on behalf of users.",
-    "developerName": "Scalekit",
+    "longDescription": "Authentication for AI agents. OAuth flows, token vault, 100+ connectors (Gmail, Slack, Salesforce, etc.), tool discovery, and live testing — so agents can act on behalf of users.",
+    "developerName": "Scalekit Inc.",
     "category": "Agent Auth",
     "capabilities": ["Interactive", "Write"],
     "websiteURL": "https://docs.scalekit.com/agentkit/overview.md",
