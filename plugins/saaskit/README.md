@@ -4,6 +4,8 @@ Production-ready auth for B2B SaaS apps. This plugin brings Scalekit SaaSKit int
 
 ## Skills
 
+- `/saaskit:setup`
+  New to SaaSKit? Start here — answers 3 questions and routes you to the right skill.
 - `implementing-saaskit` — Core auth flow: login, signup, callback, token exchange, session management, logout. Framework references for Go, Spring Boot, Laravel.
 - `implementing-saaskit-nextjs` — Auth for Next.js App Router.
 - `implementing-saaskit-python` — Auth for Django, FastAPI, or Flask. Framework references included.
