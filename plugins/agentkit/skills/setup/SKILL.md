@@ -42,14 +42,14 @@ If answers aren't already clear from context, ask:
 Before starting any skill, verify credentials exist:
 
 ```bash
-SCALEKIT_ENV_URL=https://your-env.scalekit.dev
+SCALEKIT_ENVIRONMENT_URL=https://your-env.scalekit.com
 SCALEKIT_CLIENT_ID=<from dashboard>
 SCALEKIT_CLIENT_SECRET=<from dashboard>
 ```
 
 Get these from [app.scalekit.com](https://app.scalekit.com) → Developers → Settings → API Credentials.
 
-The Scalekit MCP server (`https://mcp.scalekit.com`) is pre-configured in `.mcp.json`. Claude Code handles OAuth 2.1 auth automatically — no additional setup needed.
+The Scalekit MCP server (`https://mcp.scalekit.com`) is pre-configured in `.mcp.json`. Codex handles OAuth 2.1 auth automatically — sign in with `codex mcp login scalekit` if prompted.
 
 ---
 

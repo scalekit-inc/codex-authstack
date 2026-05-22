@@ -15,7 +15,7 @@ pip install scalekit-sdk-python python-dotenv pydantic-settings starlette
 
 Add to `requirements.txt`:
 ```
-scalekit-sdk>=0.1.0
+scalekit-sdk-python>=2.4.0
 python-dotenv
 pydantic-settings
 starlette
@@ -101,7 +101,7 @@ class ScalekitClientWrapper:
         return self._client.get_user_info(access_token)
 
     def validate_token_and_get_claims(self, access_token: str) -> dict:
-        return self._client.validate_access_token(access_token)
+        return self._client.validate_access_token_and_get_claims(access_token)
 
     def refresh_access_token(self, refresh_token: str) -> dict:
         return self._client.refresh_token(refresh_token)

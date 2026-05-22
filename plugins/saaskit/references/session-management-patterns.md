@@ -123,7 +123,7 @@ async function scalekitSessionMiddleware(req, res, next) {
   if (!accessToken) return res.redirect('/login');
 
   try {
-    const payload = await scalekit.auth.validateAccessToken(accessToken);
+    const payload = await scalekit.validateAccessToken(accessToken);
     req.user = payload;
     return next();
   } catch (err) {
@@ -139,10 +139,10 @@ async function handleTokenRefresh(req, res, next) {
   if (!refreshToken) return res.redirect('/login');
 
   try {
-    const newTokens = await scalekit.auth.refreshTokens(refreshToken);
+    const newTokens = await scalekit.refreshAccessToken(refreshToken);
     res.cookie('access_token', newTokens.access_token, { /* same options */ });
     res.cookie('refresh_token', newTokens.refresh_token, { /* same options */ });
-    req.user = await scalekit.auth.validateAccessToken(newTokens.access_token);
+    req.user = await scalekit.validateAccessToken(newTokens.access_token);
     return next();
   } catch (err) {
     res.clearCookie('access_token');
