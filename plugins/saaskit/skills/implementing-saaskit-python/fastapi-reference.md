@@ -117,11 +117,12 @@ class ScalekitClientWrapper:
         except Exception:
             return False
 
-    def logout(self, access_token: str) -> str:
-        return self._client.get_logout_url(
-            access_token=access_token,
+    def logout(self, id_token: str) -> str:
+        from scalekit.common.scalekit import LogoutUrlOptions
+        return self._client.get_logout_url(LogoutUrlOptions(
+            id_token_hint=id_token,
             post_logout_redirect_uri=settings.scalekit_redirect_uri.replace('/auth/callback', '/'),
-        )
+        ))
 
 @lru_cache(maxsize=1)
 def scalekit_client() -> ScalekitClientWrapper:
