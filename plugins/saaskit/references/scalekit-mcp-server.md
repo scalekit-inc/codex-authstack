@@ -73,7 +73,7 @@ server.tool(
   },
   async ({ environmentId, name }, { token }) => {
     // Token already validated by middleware
-    const organization = await scalekit.createOrganization({
+    const organization = await scalekit.organization.createOrganization({
       environmentId,
       name,
     });
@@ -441,8 +441,8 @@ The Scalekit MCP server is already hosted and ready to use:
 {
   "mcpServers": {
     "scalekit": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.scalekit.com/"]
+      "type": "http",
+      "url": "https://mcp.scalekit.com/"
     }
   }
 }
