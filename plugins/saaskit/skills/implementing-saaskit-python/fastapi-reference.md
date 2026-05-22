@@ -28,7 +28,7 @@ starlette
 Create `.env` (never commit this):
 
 ```env
-SCALEKIT_ENV_URL=https://your-env.scalekit.com
+SCALEKIT_ENVIRONMENT_URL=https://your-env.scalekit.com
 SCALEKIT_CLIENT_ID=your_client_id
 SCALEKIT_CLIENT_SECRET=your_client_secret
 SCALEKIT_REDIRECT_URI=http://localhost:8000/auth/callback
@@ -52,7 +52,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Settings(BaseSettings):
-    scalekit_env_url: str = os.getenv('SCALEKIT_ENV_URL', '')
+    scalekit_env_url: str = os.getenv('SCALEKIT_ENVIRONMENT_URL', '')
     scalekit_client_id: str = os.getenv('SCALEKIT_CLIENT_ID', '')
     scalekit_client_secret: str = os.getenv('SCALEKIT_CLIENT_SECRET', '')
     scalekit_redirect_uri: str = os.getenv('SCALEKIT_REDIRECT_URI', 'http://localhost:8000/auth/callback')

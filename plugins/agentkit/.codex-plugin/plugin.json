@@ -7,7 +7,7 @@
     "email": "support@scalekit.com",
     "url": "https://scalekit.com"
   },
-  "homepage": "https://docs.scalekit.com/agentkit/overview.md",
+  "homepage": "https://docs.scalekit.com/agentkit/overview",
   "repository": "https://github.com/scalekit-inc/codex-authstack",
   "license": "MIT",
   "keywords": ["scalekit", "agentkit", "agent-auth", "oauth", "connectors", "tool-calling"],
@@ -21,7 +21,7 @@
     "developerName": "Scalekit Inc.",
     "category": "Agent Auth",
     "capabilities": ["Interactive", "Write"],
-    "websiteURL": "https://docs.scalekit.com/agentkit/overview.md",
+    "websiteURL": "https://docs.scalekit.com/agentkit/overview",
     "privacyPolicyURL": "https://www.scalekit.com/privacy",
     "termsOfServiceURL": "https://www.scalekit.com/terms",
     "defaultPrompt": [

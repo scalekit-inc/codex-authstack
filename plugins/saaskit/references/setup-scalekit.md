@@ -49,11 +49,12 @@ npm i -g @scalekit-inc/cli
 
 **Python**
 ```python
-import scalekit.client, os
+from scalekit import ScalekitClient
+import os
 from dotenv import load_dotenv
 load_dotenv()
 
-scalekit = scalekit.client.ScalekitClient(
+sk_client = ScalekitClient(
     client_id=os.getenv("SCALEKIT_CLIENT_ID"),
     client_secret=os.getenv("SCALEKIT_CLIENT_SECRET"),
     env_url=os.getenv("SCALEKIT_ENVIRONMENT_URL"),
