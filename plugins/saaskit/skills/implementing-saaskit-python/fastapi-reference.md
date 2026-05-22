@@ -98,7 +98,7 @@ class ScalekitClientWrapper:
         )
 
     def get_user_info(self, access_token: str) -> dict:
-        return self._client.get_user_info(access_token)
+        return self._client.validate_access_token_and_get_claims(access_token)
 
     def validate_token_and_get_claims(self, access_token: str) -> dict:
         return self._client.validate_access_token_and_get_claims(access_token)
