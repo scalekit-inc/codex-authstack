@@ -104,7 +104,7 @@ class ScalekitClientWrapper:
         return self._client.validate_access_token_and_get_claims(access_token)
 
     def refresh_access_token(self, refresh_token: str) -> dict:
-        return self._client.refresh_token(refresh_token)
+        return self._client.refresh_access_token(refresh_token)
 
     def has_permission(self, access_token: str, permission: str) -> bool:
         try:

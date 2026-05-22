@@ -56,7 +56,7 @@ If the user wants **login + SSO + SCIM** (full B2B auth stack), start with `/saa
 Before starting any skill, verify credentials exist:
 
 ```bash
-SCALEKIT_ENVIRONMENT_URL=https://your-env.scalekit.dev
+SCALEKIT_ENVIRONMENT_URL=https://your-env.scalekit.com
 SCALEKIT_CLIENT_ID=<from dashboard>
 SCALEKIT_CLIENT_SECRET=<from dashboard>
 ```

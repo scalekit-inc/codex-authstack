@@ -9,7 +9,7 @@ pip install scalekit-sdk-python python-dotenv django
 ## Environment variables
 
 ```env
-SCALEKIT_ENVIRONMENT_URL=https://your-env.scalekit.dev
+SCALEKIT_ENVIRONMENT_URL=https://your-env.scalekit.com
 SCALEKIT_CLIENT_ID=your_client_id
 SCALEKIT_CLIENT_SECRET=your_client_secret
 SCALEKIT_REDIRECT_URI=http://localhost:8000/auth/callback

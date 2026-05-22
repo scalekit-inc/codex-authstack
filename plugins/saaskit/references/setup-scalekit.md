@@ -42,7 +42,7 @@ npm i -g @scalekit-inc/cli
 |----------|---------|
 | Node.js | `npm install @scalekit-sdk/node` |
 | Python | `pip install scalekit-sdk-python` |
-| Go | `go get github.com/scalekit-inc/scalekit-sdk-go` |
+| Go | `go get github.com/scalekit-inc/scalekit-sdk-go/v2` |
 | Java | Add `scalekit-sdk-java` to Maven/Gradle |
 
 ### 5. Initialize the client

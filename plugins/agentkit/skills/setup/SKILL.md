@@ -31,7 +31,7 @@ If answers aren't already clear from context, ask:
 |---|---|
 | Connect users to third-party apps, execute tools on their behalf | `/agentkit:integrating-agentkit` |
 | Discover available tools for a connector, inspect schemas | `/agentkit:discovering-connector-tools` |
-| Expose AgentKit tools over MCP for Claude Desktop, Cursor, VS Code | `/agentkit:exposing-agentkit-via-mcp` |
+| Expose AgentKit tools over MCP for Claude Desktop, Codex, Cursor, VS Code | `/agentkit:exposing-agentkit-via-mcp` |
 | Pre-launch checklist for production | `/agentkit:production-readiness-agentkit` |
 | SDK errors, wrong imports, broken auth calls | `/saaskit:scalekit-code-doctor` |
 

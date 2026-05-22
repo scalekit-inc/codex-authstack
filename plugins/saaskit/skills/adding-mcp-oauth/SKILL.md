@@ -1,6 +1,6 @@
 ---
 name: adding-mcp-oauth
-description: Guides users through adding OAuth 2.1 authorization to MCP servers using Scalekit — configures discovery endpoints, sets up token validation middleware, and enables scope-based tool authorization. Use when setting up MCP servers, implementing authentication for AI hosts like Claude Desktop, Cursor, or VS Code, or when users mention MCP security, OAuth, or Scalekit integration.
+description: Guides users through adding OAuth 2.1 authorization to MCP servers using Scalekit — configures discovery endpoints, sets up token validation middleware, and enables scope-based tool authorization. Use when setting up MCP servers, implementing authentication for AI hosts like Claude Desktop, Codex, Cursor, or VS Code, or when users mention MCP security, OAuth, or Scalekit integration.
 ---
 
 # Adding OAuth 2.1 Authorization to MCP Servers
