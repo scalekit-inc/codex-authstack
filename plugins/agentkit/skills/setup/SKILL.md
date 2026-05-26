@@ -29,11 +29,11 @@ If answers aren't already clear from context, ask:
 
 | What you're building | Skill |
 |---|---|
-| Connect users to third-party apps, execute tools on their behalf | `/agentkit:integrating-agentkit` |
-| Discover available tools for a connector, inspect schemas | `/agentkit:discovering-connector-tools` |
-| Expose AgentKit tools over MCP for Claude Desktop, Codex, Cursor, VS Code | `/agentkit:exposing-agentkit-via-mcp` |
-| Pre-launch checklist for production | `/agentkit:production-readiness-agentkit` |
-| SDK errors, wrong imports, broken auth calls | `/saaskit:scalekit-code-doctor` |
+| Connect users to third-party apps, execute tools on their behalf | `integrating-agentkit` |
+| Discover available tools for a connector, inspect schemas | `discovering-connector-tools` |
+| Expose AgentKit tools over MCP for Claude Desktop, Codex, Cursor, VS Code | `exposing-agentkit-via-mcp` |
+| Pre-launch checklist for production | `production-readiness-agentkit` |
+| SDK errors, wrong imports, broken auth calls | `scalekit-code-doctor` |
 
 ---
 
@@ -69,5 +69,5 @@ Flow: User authorizes → connected account created → agent discovers tools �
 ## When to switch skills
 
 - **Already know what you need?** Skip this skill and invoke the target directly.
-- **SDK errors?** Use `/saaskit:scalekit-code-doctor`.
-- **Want to add B2B auth (login, SSO, SCIM) to your app?** Switch to the `saaskit` plugin: `/saaskit:setup`.
+- **SDK errors?** Use `scalekit-code-doctor`.
+- **Want to add B2B auth (login, SSO, SCIM) to your app?** Switch to the `saaskit` plugin: `setup`.

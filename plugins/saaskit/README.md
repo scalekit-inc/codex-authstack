@@ -4,7 +4,7 @@ Production-ready auth for B2B SaaS apps. This plugin brings Scalekit SaaSKit int
 
 ## Skills
 
-- `/saaskit:setup`
+- `setup`
   New to SaaSKit? Start here — answers 3 questions and routes you to the right skill.
 - `implementing-saaskit` — Core auth flow: login, signup, callback, token exchange, session management, logout. Framework references for Go, Spring Boot, Laravel.
 - `implementing-saaskit-nextjs` — Auth for Next.js App Router.
@@ -18,7 +18,7 @@ Production-ready auth for B2B SaaS apps. This plugin brings Scalekit SaaSKit int
 - `adding-api-auth` — API keys (org/user scoped) and OAuth 2.0 client credentials.
 - `production-readiness-saaskit` — Unified production checklist across all SaaSKit domains.
 - `testing-auth-setup` — Validates auth integration by running the Scalekit dryrun CLI.
-- /saaskit:scalekit-code-doctor — Diagnoses SDK usage issues, import errors, and common mistakes across AgentKit and SaaSKit.
+- `scalekit-code-doctor` — Diagnoses SDK usage issues, import errors, and common mistakes across AgentKit and SaaSKit.
 
 ## Configuration
 

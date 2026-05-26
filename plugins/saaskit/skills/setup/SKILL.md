@@ -37,17 +37,17 @@ If answers aren't already clear from context, ask:
 
 | Framework | What you're adding | Skill |
 |---|---|---|
-| Next.js | Login + sessions | `/saaskit:implementing-saaskit-nextjs` |
-| Python | Login + sessions | `/saaskit:implementing-saaskit-python` |
-| Go / other | Login + sessions | `/saaskit:implementing-saaskit` |
-| Any | Enterprise SSO | `/saaskit:implementing-modular-sso` |
-| Any | SCIM provisioning | `/saaskit:implementing-scim-provisioning` |
-| Any | MCP server auth | `/saaskit:adding-mcp-oauth` |
-| Any | API keys | `/saaskit:adding-api-auth` |
-| Any | RBAC / permissions | `/saaskit:implementing-access-control` |
-| Any | Migrating from Auth0 / Firebase / custom auth | `/saaskit:migrating-to-saaskit` |
+| Next.js | Login + sessions | `implementing-saaskit-nextjs` |
+| Python | Login + sessions | `implementing-saaskit-python` |
+| Go / other | Login + sessions | `implementing-saaskit` |
+| Any | Enterprise SSO | `implementing-modular-sso` |
+| Any | SCIM provisioning | `implementing-scim-provisioning` |
+| Any | MCP server auth | `adding-mcp-oauth` |
+| Any | API keys | `adding-api-auth` |
+| Any | RBAC / permissions | `implementing-access-control` |
+| Any | Migrating from Auth0 / Firebase / custom auth | `migrating-to-saaskit` |
 
-If the user wants **login + SSO + SCIM** (full B2B auth stack), start with `/saaskit:implementing-saaskit` or the framework-specific variant, then chain to `/saaskit:implementing-modular-sso` once login is working.
+If the user wants **login + SSO + SCIM** (full B2B auth stack), start with `implementing-saaskit` or the framework-specific variant, then chain to `implementing-modular-sso` once login is working.
 
 ---
 
@@ -63,12 +63,12 @@ SCALEKIT_CLIENT_SECRET=<from dashboard>
 
 Get these from [app.scalekit.com](https://app.scalekit.com) → Developers → Settings → API Credentials.
 
-Use `/saaskit:testing-auth-setup` to validate credentials and connection end-to-end before writing any auth code.
+Use `testing-auth-setup` to validate credentials and connection end-to-end before writing any auth code.
 
 ---
 
 ## When to switch skills
 
 - **Already know what you need?** Skip this skill and invoke the target directly.
-- **SDK errors or wrong imports?** Use `/saaskit:scalekit-code-doctor`.
-- **Production checklist?** Use `/saaskit:production-readiness-saaskit`.
+- **SDK errors or wrong imports?** Use `scalekit-code-doctor`.
+- **Production checklist?** Use `production-readiness-saaskit`.

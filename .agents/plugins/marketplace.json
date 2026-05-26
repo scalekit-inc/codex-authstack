@@ -1,5 +1,9 @@
 {
   "name": "scalekit-auth-stack",
+  "owner": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com"
+  },
   "interface": {
     "displayName": "Scalekit Auth Stack"
   },
