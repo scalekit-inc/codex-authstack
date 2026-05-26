@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "./hooks/beacon.sh agentkit stop",
+            "command": "${HOME}/.codex/marketplaces/scalekit-auth-stack/plugins/agentkit/hooks/beacon.sh agentkit stop",
             "timeout": 10
           }
         ]
