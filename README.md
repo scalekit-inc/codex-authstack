@@ -2,8 +2,8 @@
 
 <img src="./images/scalekit.jpg" alt="Scalekit" height="64">
 
-<p><strong>Scalekit Auth Plugins for OpenAI Codex — the auth stack for agents.</strong><br>
-Add SSO, SCIM, MCP Auth, agent auth, and tool-calling to your Codex projects.</p>
+<p><strong>Scalekit Auth Stack for OpenAI Codex — AgentKit and SaaSKit plugins.</strong><br>
+Add agent auth, tool calling, SSO, SCIM, MCP auth, and session management to your Codex projects.</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/scalekit-inc/codex-authstack/pulls)
@@ -14,19 +14,16 @@ Add SSO, SCIM, MCP Auth, agent auth, and tool-calling to your Codex projects.</p
 
 ---
 
-This repository publishes a Codex-native marketplace of Scalekit auth plugins — focused auth packages that add SSO, SCIM, MCP auth, agent auth, and tool-calling to your projects.
+Setting up auth for B2B and AI apps is complex. This marketplace adds the complete Scalekit auth stack to your projects — whether that's an AI agent, a B2B SaaS app, or an MCP server — directly from Codex.
 
 ---
 
-### Included Plugins
+### Available Plugins
 
 | Plugin | Description |
 |--------|-------------|
-| `mcp-auth` | OAuth 2.1 authorization for MCP servers — discovery endpoint, token validation, scope enforcement |
-| `agent-auth` | Scalekit Agent Auth so AI agents can act in third-party apps (Gmail, Slack, Calendar, Notion) on behalf of users |
-| `full-stack-auth` | Full-stack web authentication — login pages, sessions, protected routes, RBAC, and more |
-| `modular-sso` | Enterprise SSO with 20+ identity providers (Okta, Entra ID, JumpCloud) via SAML/OIDC |
-| `modular-scim` | SCIM 2.0 user provisioning, group sync, and directory lifecycle management |
+| **AgentKit** | Authentication for AI agents. OAuth flows, token vault, 100+ connectors (Gmail, Slack, Salesforce, etc.), tool discovery, and live testing — so agents can act on behalf of users. |
+| **SaaSKit** | Production-ready auth for B2B SaaS apps. Login, sessions, SSO (Okta, Azure AD, Google), SCIM provisioning, RBAC, MCP server auth, and API key management. |
 
 ---
 
@@ -50,7 +47,7 @@ This installer:
 If you are developing locally from a clone:
 
 ```bash
-./scripts/install_codex_marketplace.sh
+./scripts/install.sh
 ```
 
 This script:
@@ -68,42 +65,25 @@ After the script runs:
 1. Restart Codex
 2. Open the Plugin Directory in Codex
 3. In the marketplace picker, choose `Scalekit Auth Stack`
-4. Install one of the plugins:
-   - `mcp-auth`
-   - `agent-auth`
-   - `modular-sso`
-   - `modular-scim`
-   - `full-stack-auth`
+4. Install a plugin:
+   - `agentkit` — for AI agent authentication
+   - `saaskit` — for B2B SaaS authentication
 5. Try one of the sample prompts from the installed plugin README
 
 ---
 
-### Plugin Details
+### Repository Structure
 
-#### mcp-auth
-
-The `mcp-auth` plugin adds production-ready OAuth 2.1 authorization to any MCP server. Once installed, Codex will:
-
-- Serve a `/.well-known/oauth-protected-resource` discovery endpoint
-- Add Bearer token validation middleware that checks audience, issuer, expiry, and scopes
-- Wire up per-tool scope enforcement
-- Support both **Node.js** (Express / FastMCP) and **Python** (FastAPI / FastMCP)
-
-#### agent-auth
-
-The `agent-auth` plugin implements Scalekit Agent Auth — so your AI agents can act on behalf of users in Gmail, Slack, Notion, Google Calendar, and 40+ other connected services.
-
-#### full-stack-auth
-
-The `full-stack-auth` plugin adds end-to-end authentication to B2B and AI apps using Scalekit. One integration enables: social sign-in, magic links, enterprise SSO, workspaces, MCP authentication, SCIM provisioning, and user management.
-
-#### modular-sso
-
-The `modular-sso` plugin integrates enterprise SSO with existing user management systems. It handles IdP-initiated and SP-initiated login, attribute mapping, JIT provisioning, and enterprise customer onboarding via the admin portal.
-
-#### modular-scim
-
-The `modular-scim` plugin adds SCIM 2.0 directory sync to applications. It handles real-time user provisioning, deprovisioning, and group membership changes from enterprise identity providers.
+```
+.
+├── plugins/
+│   ├── agentkit/         # AI agent authentication (AgentKit)
+│   └── saaskit/          # B2B SaaS authentication (SaaSKit)
+├── images/               # Documentation images
+├── scripts/              # Install scripts
+├── AGENTS.md             # Contribution guidelines
+└── LICENSE               # MIT License
+```
 
 ---
 
@@ -112,6 +92,8 @@ The `modular-scim` plugin adds SCIM 2.0 directory sync to applications. It handl
 - [Scalekit account](https://scalekit.com) with `client_id` and `client_secret`
 - Codex CLI installed and configured
 - Project where you want to add authentication
+
+> **Windows**: install.sh requires macOS or Linux (or WSL on Windows). Native Windows PowerShell install is not yet supported.
 
 ---
 
@@ -136,9 +118,9 @@ This checks:
 #### Documentation
 
 - [Scalekit Documentation](https://docs.scalekit.com) — Complete guides and API reference
-- [SSO Quickstart](https://docs.scalekit.com/sso/quickstart/) — Implement enterprise SSO
-- [MCP Auth Guide](https://docs.scalekit.com/mcp-auth/quickstart/) — Secure MCP servers
-- [Agent Auth Guide](https://docs.scalekit.com/agent-auth/quickstart/) — Authentication for AI agents
+- [Modular SSO guide](https://docs.scalekit.com/authenticate/sso/add-modular-sso/) — Implement enterprise SSO
+- [MCP Auth guide](https://docs.scalekit.com/authenticate/mcp/quickstart/) — Secure MCP servers
+- [AgentKit overview](https://docs.scalekit.com/agentkit/overview/) — Connect agents to authenticated tools
 
 #### Resources
 

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${HOME}/.codex/marketplaces/scalekit-auth-stack/plugins/saaskit/hooks/beacon.sh saaskit stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

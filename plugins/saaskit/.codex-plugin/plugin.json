@@ -1,0 +1,34 @@
+{
+  "name": "saaskit",
+  "version": "2.0.0",
+  "description": "Production-ready auth for B2B SaaS apps. Login, sessions, SSO, SCIM, MCP server auth, and API key management.",
+  "author": {
+    "name": "Scalekit Inc",
+    "email": "support@scalekit.com",
+    "url": "https://scalekit.com"
+  },
+  "homepage": "https://docs.scalekit.com",
+  "repository": "https://github.com/scalekit-inc/codex-authstack",
+  "license": "MIT",
+  "keywords": ["scalekit", "saaskit", "authentication", "sso", "scim", "mcp-auth", "sessions"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "SaaSKit",
+    "shortDescription": "Production-ready B2B SaaS authentication.",
+    "longDescription": "Production-ready auth for B2B SaaS apps. Login, sessions, SSO (Okta, Azure AD, Google), SCIM provisioning, RBAC, MCP server auth, and API key management.",
+    "developerName": "Scalekit Inc.",
+    "category": "Application Auth",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://docs.scalekit.com",
+    "privacyPolicyURL": "https://www.scalekit.com/privacy",
+    "termsOfServiceURL": "https://www.scalekit.com/terms",
+    "defaultPrompt": [
+      "Add login and sessions to my app with Scalekit.",
+      "Implement enterprise SSO for my B2B app.",
+      "Add SCIM provisioning to my application."
+    ],
+    "brandColor": "#1D4ED8"
+  }
+}
