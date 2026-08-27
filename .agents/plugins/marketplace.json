@@ -1,8 +1,9 @@
 {
   "name": "scalekit-auth-stack",
   "interface": {
-    "displayName": "Scalekit Auth Stack"
+    "displayName": "Scalekit Auth Stack (archived — use scalekit-inc/authstack)"
   },
+  "description": "ARCHIVED. Install from scalekit-inc/authstack instead.",
   "plugins": [
     {
       "name": "mcp-auth",
